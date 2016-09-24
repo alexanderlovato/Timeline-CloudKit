@@ -10,7 +10,9 @@ import UIKit
 
 class PostListTableViewController: UITableViewController {
     
+    // MARK: - Private Properties
     private let postTableViewCell = "PostTableViewCell"
+    private let viewPostDetail = "viewPostDetail"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,16 +53,20 @@ class PostListTableViewController: UITableViewController {
         }
     }
 
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        let postDetailTableViewController = segue.destination as! PostDetailTableViewController
+        
+        guard let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) else { return }
+        let index = indexPath.row
+        let postToPass = PostController.sharedController.posts[index]
+        postDetailTableViewController.post = postToPass
+        
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
 

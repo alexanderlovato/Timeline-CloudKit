@@ -24,6 +24,7 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /// Update post cell with a UIImage
     func updateWithPost(image: UIImage) {
         guard let post = post,
             let photoData = post.photoData,
