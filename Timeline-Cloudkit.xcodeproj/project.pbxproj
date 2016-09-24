@@ -146,9 +146,9 @@
 			children = (
 				FAD50F711D94C21600FA40AE /* SearchResultsTableViewController.swift */,
 				FAD50F6F1D94C1CB00FA40AE /* AddPostTableViewController.swift */,
-				FAD50F6D1D94BFF700FA40AE /* PostDetailTableViewController.swift */,
 				FAD50F6B1D94BFC500FA40AE /* PostListTableViewController.swift */,
 				FAD50F7C1D95F5C100FA40AE /* PostTableViewCell.swift */,
+				FAD50F6D1D94BFF700FA40AE /* PostDetailTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -564,6 +564,7 @@
 				FAD50F641D94BF3100FA40AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD50F651D94BF3100FA40AE /* Build configuration list for PBXNativeTarget "Timeline-CloudkitTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +573,7 @@
 				FAD50F671D94BF3100FA40AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD50F681D94BF3100FA40AE /* Build configuration list for PBXNativeTarget "Timeline-CloudkitUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +582,7 @@
 				FAD50F6A1D94BF3100FA40AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

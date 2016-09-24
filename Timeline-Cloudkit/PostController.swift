@@ -41,4 +41,11 @@ class PostController {
         
     }
     
+    func deletePost(post: Post) {
+        let indexPath = IndexPath()
+        post.comments.remove(at: indexPath.row)
+        
+        
+    }
+    
 }
