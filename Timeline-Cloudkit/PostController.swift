@@ -33,7 +33,6 @@ class PostController {
     
     /// Adds a comment to the appropriate post
     func addCommentToPost(text: String, post: Post) -> Comment {
-        
         let comment = Comment(text: text, post: post)
         post.comments.append(comment)
         return comment
@@ -44,8 +43,6 @@ class PostController {
     func deletePost(post: Post) {
         let indexPath = IndexPath()
         post.comments.remove(at: indexPath.row)
-        
-        
     }
-    
+  
 }
