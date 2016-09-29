@@ -23,7 +23,7 @@ class PostController {
     func createPost(image: UIImage, caption: String?) {
         
         guard let caption = caption,
-            let data = UIImagePNGRepresentation(image) else { return }
+            let data = UIImageJPEGRepresentation(image, 0.8) else { return }
         
         let post = Post(photoData: data)
         posts.append(post)

@@ -18,6 +18,11 @@ class PostListTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
 
 
     // MARK: - Table view data source
@@ -32,9 +37,7 @@ class PostListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: postTableViewCell, for: indexPath) as! PostTableViewCell
 
         let post = PostController.sharedController.posts[indexPath.row]
-        
-        guard let photo = post.photo else { return cell }
-        cell.updateWithPost(image: photo)
+        cell.updateWithPost(post: post)
 
         return cell
     }

@@ -21,8 +21,8 @@ class PostDetailTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 40
         
-        guard let post = post?.photo else { return }
-        updateWithPost(image: post)
+        guard let post = post else { return }
+        updateWithPost(post: post)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,12 +31,8 @@ class PostDetailTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    func updateWithPost(image: UIImage) {
-        guard let post = post,
-            let photoData = post.photoData,
-            let image = UIImage(data: photoData) else { return }
-        
-        self.postImageView = UIImageView(image: image)
+    func updateWithPost(post: Post) {
+        postImageView.image = post.photo
         tableView.reloadData()
         
     }
